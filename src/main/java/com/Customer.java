@@ -17,7 +17,7 @@ public class Customer {
 									Class.forName("com.mysql.jdbc.Driver"); 
 	 
 									//Provide the correct details: DBServer/DBName, username, password 
-									con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/paf_labs", "root", ""); 
+									con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/electrogrid_customer", "root", ""); 
 							} 
 							catch (Exception e) {
 								e.printStackTrace();
