@@ -12,7 +12,7 @@ pageEncoding="ISO-8859-1"%>
 </head>
 <body> 
 <div class="container"><div class="row"><div class="col-6"> 
-<h1>Customer Management V10.1</h1>
+<h1>ElectroGrid Customer Management</h1>
 <form id="formCustomer" name="formCustomer" method="post" action="customers.jsp">
  Customer Name: 
  <input id="Cus_name" name="Cus_name" type="text" 
