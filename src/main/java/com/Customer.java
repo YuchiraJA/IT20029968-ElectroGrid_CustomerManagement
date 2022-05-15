@@ -82,8 +82,10 @@ public class Customer {
 									return "Error while connecting to the database for reading."; 
 									
 									} 
+								
+				
 								// Prepare the html table to be displayed
-								output = "<table border='1' class='table'><tr><th>User ID</th>" + "<th>Customer Full Name</th>" + "<th>Account Number</th>" +
+								output = "<table border='1' class='table'><tr><th>Customer Full Name</th>" + "<th>Account Number</th>" +
 										"<th>Customer Email</th>" + 
 										"<th>Customer Phone No</th>" +
 										"<th>Customer Address</th>" +
@@ -101,9 +103,9 @@ public class Customer {
 										String Email = rs.getString("Email"); 
 										String PhoneNo = rs.getString("PhoneNo"); 
 										String Address = rs.getString("Address"); 
+										
 										// Add into the html table
-										output += "<tr><td>" + UserID + "</td>";
-										output += "<td>" + Cus_name + "</td>"; 
+										output += "<tr><td><input id='hidUserIDUpdate' name='hidUserIDUpdate' type='hidden' value='"+UserID+"'>"+Cus_name+"</td>";
 										output += "<td>" + AccountNo + "</td>"; 
 										output += "<td>" + Email + "</td>"; 
 										output += "<td>" + PhoneNo + "</td>"; 
@@ -139,6 +141,7 @@ public class Customer {
 								// create a prepared statement
 								String query = "UPDATE customer SET Cus_name=?,AccountNo=?,Email=?,PhoneNo=?,Address=? WHERE UserID=?"; 
 								PreparedStatement preparedStmt = con.prepareStatement(query); 
+								
 								// binding values
 								preparedStmt.setString(1, cusname); 
 								preparedStmt.setString(2, accountno); 
